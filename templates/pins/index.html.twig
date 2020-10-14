@@ -6,7 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Salut
-    </h1>
+    <h1>Salut</h1>
+{% for pin in pins %}
+<article>
+    <h1>{{ pin.titre() }}</h1>
+    <p>{{ pin.description }}</p>
+</article>
+{% endfor %}
 </body>
 </html>
