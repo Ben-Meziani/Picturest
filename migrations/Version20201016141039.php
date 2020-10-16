@@ -10,11 +10,11 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20201014162313 extends AbstractMigration
+final class Version20201016141039 extends AbstractMigration
 {
     public function getDescription() : string
     {
-        return 'Create pins table';
+        return '';
     }
 
     public function up(Schema $schema) : void

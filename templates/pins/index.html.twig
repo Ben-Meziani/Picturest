@@ -1,19 +1,27 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Salut</h1>
+    <h1>All Pins</h1>
 
     <a href="{{ path('app_pins_create') }}">Create pin</a>
-{% for pin in pins %}
-<article>
-    <h1>{{ pin.titre() }}</h1>
-    <p>{{ pin.description }}</p>
-</article>
-{% endfor %}
+
+    {% if pins|length > 0 %}
+        {% for pin in pins %}
+            <article>
+                <h1>{{ pin.titre() }}</h1>
+                <p>{{ pin.description }}</p>
+            </article>
+        {% endfor %}
+    {% else %}
+    <p>Sorry, no pins yet !</p>
+    {% endif %}
 </body>
+
 </html>
